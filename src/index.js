@@ -16,7 +16,7 @@
 // console.log(val3);
 
 // //const変数は上書き不可
-// //val3 = "const変数を上書き";
+// val3 = "const変数を上書き";
 
 // const val3 = "const変数を再宣言";
 
@@ -140,7 +140,7 @@
  * mapやfilterを使った配列の処理
  */
 
-const nameArr = ["田中", "山田", "じゃけぇ"];
+// const nameArr = ["田中", "山田", "じゃけぇ"];
 // for (let index = 0; index < nameArr.length; index++) {
 //   console.log(`${index + 1}番目は${nameArr[index]}です`);
 // }
@@ -150,7 +150,7 @@ const nameArr = ["田中", "山田", "じゃけぇ"];
 // });
 // console.log(nameArr2);
 
-nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
+// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
 
 // const numArr = [1, 2, 3, 4, 5];
 // const newNumArr = numArr.filter((num) => {
@@ -159,12 +159,55 @@ nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
 
 // console.log(newNumArr);
 
-const newNameArr = nameArr.map((name) => {
-  if (name === "じゃけぇ") {
-    return name;
-  } else {
-    return `${name}さん`;
-  }
-});
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "じゃけぇ") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
 
-console.log(newNameArr);
+// console.log(newNameArr);
+
+/**
+ * 三項演算子
+ */
+//ある条件 ? 条件がtrueの時 : 条件がfalseの時
+// const val1 = 1 < 0 ? "trueです" : "falseです";
+// console.log(val1);
+
+// const num = 1300;
+
+// const formattedNum =
+//   typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
+// console.log(formattedNum);
+
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? "100を超えています!!" : "許容範囲内です";
+// };
+
+// console.log(checkSum(50, 40));
+
+/**
+ * 論理演算子の本当の意味を知ろう && ||
+ */
+// const flag1 = true;
+// const flag2 = true;
+
+// if (flag1 || flag2) {
+//   console.log("1か２はtrueになります");
+// }
+
+// if (flag1 && flag2) {
+//   console.log("1も２もtrueになります");
+// }
+
+// || は左側がfalseとなる時なら右側を返す
+// const num = 100;
+// const fee = num || " 金額未設定です";
+// console.log(fee);
+
+//&& は左側がtrueなら右側を返す
+const num2 = 100;
+const fee2 = num2 && "何か設定されました";
+console.log(fee2);
