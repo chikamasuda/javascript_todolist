@@ -121,12 +121,12 @@
 // console.log(arr3);
 
 //配列のコピーや結合
-const arr4 = [10, 20];
+// const arr4 = [10, 20];
 
-const arr6 = [...arr4];
-arr6[0] = 100;
-console.log(arr6);
-console.log(arr4);
+// const arr6 = [...arr4];
+// arr6[0] = 100;
+// console.log(arr6);
+// console.log(arr4);
 
 // const arr7 = [...arr4, ...arr5];
 // console.log(arr7);
@@ -142,7 +142,7 @@ console.log(arr4);
 
 const nameArr = ["田中", "山田", "じゃけぇ"];
 // for (let index = 0; index < nameArr.length; index++) {
-//   console.log(nameArr[index]);
+//   console.log(`${index + 1}番目は${nameArr[index]}です`);
 // }
 
 // const nameArr2 = nameArr.map((name) => {
@@ -150,11 +150,21 @@ const nameArr = ["田中", "山田", "じゃけぇ"];
 // });
 // console.log(nameArr2);
 
-// nameArr.map((name) => console.log(name));
+nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
 
-const numArr = [1, 2, 3, 4, 5];
-const newNumArr = numArr.filter((num) => {
-  return num % 2 === 1;
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+//   return num % 2 === 0;
+// });
+
+// console.log(newNumArr);
+
+const newNameArr = nameArr.map((name) => {
+  if (name === "じゃけぇ") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
 });
 
-console.log(newNumArr);
+console.log(newNameArr);
