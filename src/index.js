@@ -1,5 +1,6 @@
 import "./styles.css";
 
+//TODOを追加する関数
 const onClickAdd = () => {
   //テキストボックスの値を取得し、初期化する。
   const inputText = document.getElementById("add-text").value;
@@ -7,7 +8,7 @@ const onClickAdd = () => {
   createImcompleteList(inputText);
 };
 
-//未完了リストから指定の要素を削除
+//未完了リストから指定の要素を削除する関数
 const deleteFromImcompleteList = (target) => {
   document.getElementById("imcomplete-list").removeChild(target);
 };
@@ -80,6 +81,7 @@ const createImcompleteList = (text) => {
   document.getElementById("imcomplete-list").appendChild(div);
 };
 
+//追加ボタンを押した時onClickAdd関数のイベントを追加
 document
   .getElementById("add-button")
   .addEventListener("click", () => onClickAdd());
